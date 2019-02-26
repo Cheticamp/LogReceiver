@@ -16,12 +16,12 @@ public class MainActivity extends AppCompatActivity {
         String intentType = intent.getType();
         Bundle intentExtras = intent.getExtras();
 
+        setContentView(R.layout.activity_main);
+        AppCompatTextView textView = findViewById(R.id.textView);
+
         if (intentType == null || intentExtras == null) {
             return;
         }
-
-        setContentView(R.layout.activity_main);
-        AppCompatTextView textView = findViewById(R.id.textView);
 
         String text = intent.getExtras().getString(Intent.EXTRA_HTML_TEXT);
         if (text != null) {
